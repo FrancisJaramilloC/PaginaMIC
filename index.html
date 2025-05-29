@@ -1,1 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma educativa sobre la calidad del software en ciencia, industria y alta seguridad. Explora DCCs, Firma de Software, Propiedad del Código y más.">
+    <title>Confiabilidad Digital: Calidad de Software en Ciencia Moderna</title>
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Confiabilidad Digital: Fundamentos para una Ingeniería de Software Robusta</h1>
+            <p class="subtitle">Del laboratorio al despliegue: herramientas, normas y mejores prácticas.</p>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="scroll-link"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#fundamentos" class="scroll-link"><i class="fas fa-cogs"></i> Fundamentos</a></li>
+                    <li><a href="#casos" class="scroll-link"><i class="fas fa-microscope"></i> Explorar Casos</a></li>
+                    <li><a href="#recursos" class="scroll-link"><i class="fas fa-book"></i> Recursos</a></li>
+                    <li><a href="#contacto" class="scroll-link"><i class="fas fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="section-padding">
+            <div class="container">
+                <h2>Bienvenido a la Confiabilidad Digital</h2>
+                <p>Esta plataforma explora los pilares técnicos que aseguran la calidad, seguridad y verificabilidad del software en entornos críticos. Desde la investigación científica hasta aplicaciones industriales de alta seguridad, la confiabilidad del software es primordial.</p>
+                <p class="motivadora">¿Cómo se asegura que un software científico sea confiable, seguro y verificable en cada etapa de su ciclo de vida?</p>
+                <button class="cta-button scroll-link" data-target="#fundamentos">
+                    <i class="fas fa-compass"></i> Iniciar Exploración
+                </button>
+            </div>
+        </section>
+
+        <section id="fundamentos" class="section-padding">
+            <div class="container">
+                <h2><i class="fas fa-cogs"></i> Fundamentos Clave</h2>
+                
+                <article class="fundamento-item">
+                    <h3><i class="fas fa-certificate"></i> Certificados de Calibración Digital (DCCs)</h3>
+                    <p>Los DCCs son documentos digitales estructurados que proporcionan evidencia de calibración y aseguran la trazabilidad metrológica. Reemplazan los certificados en papel, facilitando la automatización y el intercambio de datos.</p>
+                    <div class="interactive-area">
+                        <h4>Visualización: De Manual a XML Estructurado</h4>
+                        <div class="dcc-transform">
+                            <div class="dcc-manual">
+                                <strong>Datos Manuales (Ejemplo):</strong><br>
+                                Sensor ID: XYZ-123<br>
+                                Fecha Cal: 2023-10-26<br>
+                                Valor Ref: 10.001 Unidades<br>
+                                Incertidumbre: 0.002 Unidades
+                            </div>
+                            <div class="dcc-arrow">→</div>
+                            <div class="dcc-xml">
+                                <strong>XML Estructurado (Fragmento DCC):</strong>
+                                <pre><code><dcc:digitalCalibrationCertificate ...>
+  <dcc:administrativeData>
+    <dcc:coreData>
+      <dcc:usedLangCode>en</dcc:usedLangCode>
+      <dcc:uniqueIdentifier>XYZ-123-CAL-20231026</dcc:uniqueIdentifier>
+    </dcc:coreData>
+  </dcc:administrativeData>
+  <dcc:measurementResults>
+    <!-- Datos de calibración aquí -->
+  </dcc:measurementResults>
+</dcc:digitalCalibrationCertificate></code></pre>
+                            </div>
+                        </div>
+                        <h4>Minisimulador de Validación de DCC</h4>
+                        <textarea id="dccInput" placeholder="Pega un fragmento de XML de DCC aquí (ej: <dcc:uniqueIdentifier>ID</dcc:uniqueIdentifier>)"></textarea>
+                        <button id="validateDccBtn" class="small-button">Validar Estructura Básica</button>
+                        <p id="dccValidationResult" class="result-output"></p>
+                    </div>
+                </article>
+
+                <article class="fundamento-item">
+                    <h3><i class="fas fa-tasks"></i> Planificación de Calidad de Software (SQA) con IA</h3>
+                    <p>La SQA implica un conjunto de actividades para garantizar que el software cumple con los estándares de calidad. La IA puede ayudar a analizar grandes volúmenes de datos de proyectos para predecir riesgos y recomendar estrategias de SQA (como en SQAPlanner).</p>
+                    <div class="interactive-area">
+                        <h4>Ejemplo: Recomendaciones de SQAPlanner (Simulado)</h4>
+                        <div class="sqa-planner-output">
+                            <p><strong>Métricas Analizadas:</strong> Complejidad Ciclomática, Cobertura de Pruebas, Densidad de Defectos.</p>
+                            <p><strong>Umbrales de Riesgo Detectados:</strong> Módulo 'CalculoNuclear.cpp' - Alta Complejidad, Baja Cobertura.</p>
+                            <p><strong>Recomendación IA:</strong> "Incrementar pruebas unitarias en 'CalculoNuclear.cpp' en un 25%. Considerar refactorización para reducir complejidad (objetivo CC < 15)."</p>
+                        </div>
+                        <h4>Guías Accionables (Tipo G1-G4)</h4>
+                        <div class="accordion">
+                            <button class="accordion-button"><i class="fas fa-chevron-down"></i> G1: Revisión de Requisitos</button>
+                            <div class="accordion-content">
+                                <p>Asegurar que los requisitos sean claros, completos, consistentes y verificables. Utilizar técnicas como inspecciones y prototipado.</p>
+                            </div>
+                            <button class="accordion-button"><i class="fas fa-chevron-down"></i> G2: Diseño Robusto</button>
+                            <div class="accordion-content">
+                                <p>Aplicar principios de diseño sólido (SOLID, KISS). Documentar decisiones de arquitectura. Realizar revisiones de diseño.</p>
+                            </div>
+                            <button class="accordion-button"><i class="fas fa-chevron-down"></i> G3: Pruebas Exhaustivas</button>
+                            <div class="accordion-content">
+                                <p>Implementar múltiples niveles de prueba (unitarias, integración, sistema, aceptación). Buscar alta cobertura de código y de requisitos.</p>
+                            </div>
+                            <button class="accordion-button"><i class="fas fa-chevron-down"></i> G4: Gestión de Configuración</button>
+                            <div class="accordion-content">
+                                <p>Controlar versiones de código, artefactos y documentación. Asegurar la reproducibilidad de los builds y despliegues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fundamento-item">
+                    <h3><i class="fas fa-signature"></i> Firma de Software</h3>
+                    <p>La firma digital de software garantiza la autenticidad (quién lo creó/distribuyó) y la integridad (que no ha sido modificado desde que se firmó). Es crucial para la confianza y seguridad.</p>
+                    <div class="interactive-area">
+                        <h4>Visualización: Clave Pública y Paquete</h4>
+                        <div class="signature-visual">
+                            <span>[Paquete de Software <i class="fas fa-box-open"></i>]</span>
+                            <span class="arrow-process">→ Firma con Clave Privada <i class="fas fa-key"></i> →</span>
+                            <span>[Paquete Firmado <i class="fas fa-file-archive"></i> + <i class="fas fa-shield-alt"></i>]</span>
+                            <br>
+                            <span>[Verificación con Clave Pública <i class="fas fa-unlock-alt"></i>] → Confianza <i class="fas fa-check-circle"></i></span>
+                        </div>
+                        <h4>Simulación de Proceso de Firma</h4>
+                        <select id="signingKeyType">
+                            <option value="valid">Clave Válida</option>
+                            <option value="invalid">Clave Inválida/Expirada</option>
+                        </select>
+                        <button id="simulateSignBtn" class="small-button">Simular Firma</button>
+                        <p id="signingResult" class="result-output"></p>
+                    </div>
+                </article>
+
+                <article class="fundamento-item">
+                    <h3><i class="fas fa-users-cog"></i> Propiedad del Código</h3>
+                    <p>Identificar quién es responsable o tiene más conocimiento sobre ciertas partes del código. Ayuda en la asignación de bugs, revisiones y mantenimiento. Se puede medir por commits o por líneas de código (LOC).</p>
+                    <div class="interactive-area">
+                        <h4>Comparativa: Commits vs. Líneas de Código</h4>
+                        <div class="code-ownership-comparison">
+                            <div>
+                                <strong>Por Commits:</strong>
+                                <ul>
+                                    <li>Refleja actividad reciente y cambios.</li>
+                                    <li>Bueno para identificar mantenedores activos.</li>
+                                    <li>Puede no reflejar la cantidad de código escrito originalmente.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <strong>Por Líneas (LOC):</strong>
+                                <ul>
+                                    <li>Refleja quién escribió la mayor parte del código.</li>
+                                    <li>Útil para entender la autoría original.</li>
+                                    <li>Puede no reflejar el conocimiento actual si el autor original ya no está.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h4>Visualizar Desarrolladores "Mayores" (Simulado)</h4>
+                        <select id="ownershipMetric">
+                            <option value="commits">Basado en Commits</option>
+                            <option value="loc">Basado en Líneas de Código</option>
+                        </select>
+                        <button id="visualizeOwnershipBtn" class="small-button">Visualizar</button>
+                        <div id="ownershipVisual" class="result-output">
+                            <!-- Resultados se insertarán aquí -->
+                        </div>
+                        <p><strong>Cuándo usar cada enfoque:</strong> Commits para mantenimiento activo y resolución rápida de bugs; LOC para entender la arquitectura original y dependencias históricas.</p>
+                    </div>
+                </article>
+                
+                <article class="fundamento-item">
+                    <h3><i class="fas fa-cubes"></i> Contenedores en HPC y Calidad</h3>
+                    <p>Los contenedores (Docker, Singularity/Apptainer) empaquetan aplicaciones y sus dependencias, mejorando la reproducibilidad y portabilidad en entornos de High-Performance Computing (HPC). Esto es vital para la calidad y validez de los resultados científicos.</p>
+                    <div class="interactive-area">
+                        <h4>Gráfico en Capas de un Contenedor</h4>
+                        <div class="container-layers">
+                            <div class="layer app-layer">Aplicación Científica + Scripts</div>
+                            <div class="layer lib-layer">Bibliotecas Específicas (MPI, NumPy, etc.)</div>
+                            <div class="layer os-layer">Sistema Operativo Base (ej: Ubuntu Minimal)</div>
+                            <div class="layer host-layer">Kernel del Host (Compartido)</div>
+                        </div>
+                        <h4>Caso Simulado: Construir Contenedor Optimizado</h4>
+                        <p><strong>Objetivo:</strong> Contenerizar una simulación de fluidos que requiere una versión específica de OpenFOAM y Python.</p>
+                        <ol>
+                            <li><strong>Base Image:</strong> `ubuntu:20.04`</li>
+                            <li><strong>Dependencias del Sistema:</strong> `apt-get install build-essential python3-dev ...`</li>
+                            <li><strong>Instalar OpenFOAM:</strong> Desde fuente o paquete precompilado.</li>
+                            <li><strong>Instalar Dependencias Python:</strong> `pip install numpy pandas matplotlib`</li>
+                            <li><strong>Copiar Código de Simulación:</strong> `COPY ./sim_code /app/sim_code`</li>
+                            <li><strong>Definir Punto de Entrada:</strong> `ENTRYPOINT ["python3", "/app/sim_code/run_simulation.py"]`</li>
+                        </ol>
+                        <p><strong>Indicadores:</strong> Priorizar la <strong>portabilidad</strong> con imágenes base comunes y la <strong>eficiencia</strong> minimizando capas y tamaño.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="casos" class="section-padding alternate-bg">
+            <div class="container">
+                <h2><i class="fas fa-microscope"></i> Casos Prácticos Interactivos</h2>
+                
+                <article class="caso-item">
+                    <h3>Caso 1: Software Metrológico con DCC Defectuoso</h3>
+                    <p>Un laboratorio recibe un instrumento con un DCC. El software de gestión intenta procesarlo pero falla. La validación automática podría haber prevenido esto.</p>
+                    <div class="interactive-quiz">
+                        <p><strong>Escenario Visualizado:</strong> Un DCC sin un campo obligatorio (ej: `dcc:uniqueIdentifier`) causa un error en el sistema de importación.</p>
+                        <label for="dccQuiz">Pregunta: ¿Qué elemento crucial podría faltar en un DCC para impedir su trazabilidad completa si no está presente o es incorrecto?</label>
+                        <select id="dccQuiz">
+                            <option value="">Selecciona una opción...</option>
+                            <option value="langCode">Código de Idioma</option>
+                            <option value="uniqueId">Identificador Único Global</option>
+                            <option value="contactPerson">Persona de Contacto</option>
+                        </select>
+                        <button onclick="checkQuiz('dccQuiz', 'uniqueId', 'dccQuizFeedback')" class="small-button">Verificar</button>
+                        <p id="dccQuizFeedback" class="quiz-feedback"></p>
+                    </div>
+                </article>
+
+                <article class="caso-item">
+                    <h3>Caso 2: Paquete con Firma Expirada</h3>
+                    <p>Un usuario descarga un paquete de software de un repositorio. Al intentar instalarlo, el sistema advierte que la firma digital ha expirado o es inválida.</p>
+                     <div class="interactive-quiz">
+                        <p><strong>Diagrama de Flujo (Conceptual):</strong> Descarga -> Verificación de Firma -> [OK: Instalar | FALLO: Advertir/Bloquear]. Causas comunes de fallo: clave expirada, clave revocada, paquete modificado post-firma.</p>
+                        <label for="signatureQuiz">Pregunta: ¿Cuál es el modo de fallo MÁS común para una firma de software en un repositorio público mantenido activamente?</label>
+                        <select id="signatureQuiz">
+                            <option value="">Selecciona una opción...</option>
+                            <option value="compromised">Clave privada comprometida</option>
+                            <option value="expired">Certificado de firma expirado</option>
+                            <option value="tampered">Paquete modificado sin re-firmar</option>
+                        </select>
+                        <button onclick="checkQuiz('signatureQuiz', 'expired', 'signatureQuizFeedback')" class="small-button">Verificar</button>
+                        <p id="signatureQuizFeedback" class="quiz-feedback"></p>
+                    </div>
+                </article>
+
+                <article class="caso-item">
+                    <h3>Caso 3: Código sin Propietario Claro en Proyecto Crítico</h3>
+                    <p>Un bug crítico surge en un módulo de un sistema de control aéreo. El análisis de propiedad del código muestra que los desarrolladores originales ya no están y nadie ha trabajado extensamente en esa área recientemente.</p>
+                    <div class="interactive-quiz">
+                        <p><strong>Visualización del Impacto:</strong> Tiempo de resolución de bugs se dispara. Riesgo de introducir nuevos errores por falta de conocimiento.</p>
+                        <label for="ownershipQuiz">Pregunta: Para mitigar el riesgo en un módulo "huérfano" crucial, ¿qué estrategia proactiva es MÁS efectiva?</label>
+                        <select id="ownershipQuiz">
+                            <option value="">Selecciona una opción...</option>
+                            <option value="docs">Documentar exhaustivamente el módulo</option>
+                            <option value="refactor">Refactorizar el módulo inmediatamente</option>
+                            <option value="assign">Asignar un equipo pequeño para que se apropie y aprenda el módulo gradualmente</option>
+                        </select>
+                        <button onclick="checkQuiz('ownershipQuiz', 'assign', 'ownershipQuizFeedback')" class="small-button">Verificar</button>
+                        <p id="ownershipQuizFeedback" class="quiz-feedback"></p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="recursos" class="section-padding">
+            <div class="container">
+                <h2><i class="fas fa-book"></i> Recursos y Enlaces</h2>
+                <ul>
+                    <li><i class="fas fa-download"></i> <a href="#" target="_blank" rel="noopener noreferrer">Guía de Buenas Prácticas en SQA (PDF Ejemplo)</a></li>
+                    <li><i class="fas fa-link"></i> <a href="https://www.ptb.de/empir2018/d-si/empir-d-si/" target="_blank" rel="noopener noreferrer">Marco D-SI (Digital Standardisation Infrastructure)</a></li>
+                    <li><i class="fas fa-tools"></i> Herramientas Útiles:
+                        <ul>
+                            <li>SQA: SonarQube, PMD, Checkstyle</li>
+                            <li>Firma: GnuPG, SignTool (Windows), Jarsigner (Java)</li>
+                            <li>Análisis Propiedad: Git-Blame, CodeScene</li>
+                            <li>Contenedores: Docker, Apptainer (antes Singularity)</li>
+                        </ul>
+                    </li>
+                    <li><i class="fas fa-database"></i> <a href="#" target="_blank" rel="noopener noreferrer">Enlace a Papers y Datasets Públicos (Ejemplo)</a></li>
+                </ul>
+                <a href="#contacto" class="cta-button scroll-link">
+                    <i class="fas fa-question-circle"></i> ¿Preguntas o Sugerencias?
+                </a>
+            </div>
+        </section>
+        
+        <section id="contacto" class="section-padding alternate-bg">
+            <div class="container">
+                <h2><i class="fas fa-envelope"></i> Contacto</h2>
+                <p>Si tienes preguntas, sugerencias o deseas colaborar, no dudes en ponerte en contacto.</p>
+                <form id="contactForm" class="contact-form">
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div>
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
+                </form>
+                <p id="formStatus" class="result-output" style="margin-top: 15px;"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Confiabilidad Digital. Todos los derechos reservados (ejemplo).</p>
+            <p>
+                <a href="mailto:info@confiabilidaddigital.dev" aria-label="Correo electrónico"><i class="fas fa-envelope"></i> info@confiabilidaddigital.dev</a> |
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a> |
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </p>
+            <p>Contenido inspirado y agradecido a iniciativas como <a href="https://www.ptb.de/empir2018/" target="_blank" rel="noopener noreferrer">EMPIR</a> y herramientas conceptuales como <a href="#" target="_blank" rel="noopener noreferrer">SQAPlanner</a>.</p>
+            <p>Licencia de contenido: Creative Commons Atribución (CC BY) - Ejemplo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
